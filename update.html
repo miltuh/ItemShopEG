@@ -2,19 +2,38 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css">
     <title></title>
   </head>
   <body>
-    <h1>Update Price</h1>
+    <div class="division" style="  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 15;
+  top: 30%;
+  left: 50%;
+  margin: -100px 0 0 -150px;">
+    <div class="field">
     <form class="" action="index.html" method="post">
       <label class="label">New Price</label>
+      <div class="control">
       <input class="" pattern="(. *[0-9])" type="ext" name="updatePrice">
       <label class="label">Is it active?</label>
+    </div>
+  </div>
+        <div class="control">
+        <div class="select">
       <select name="is_active">
         <option>Yes</option>
         <option>No</option>
+      </div>
+      </div>
       </select>
-      <input class="input" type="submit" value="Send">
+      <br>
+      <div class="control">
+    <button class="button" style="background: pink">Submit</button>
+  </div>
+</div>
     </form>
   </body>
 </html>

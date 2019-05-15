@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Cart</title>
+<title>Product List</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Little Closet template">
@@ -13,39 +13,9 @@
 </head>
 <body>
 
-<?php
-		$servername = "localhost";
-		$username = "root";
-    $password = "fuckyoulol";
-    $dbname = "products";
-
-	try {
-		$conn = new PDO("mysql:host=$servername;dbname=$dbname",$username, 'fuckyoulol');
-		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$sql = "select * from producto";
-
-		if(conn){
-			$result = $conn->query(sql);
-			foreach ($result as $value) {
-				echo "<br>" . $value["product_name"];
-				echo "<br>" . $value["price"];
-			}
-		}else{
-				echo "nothing";
-		}
-	}
-	catch(PDOException $e)
-	{
-		echo $sql . "<br>" . $e->getMessage();
-	}
-	$conn = null;
-?>
-
-<!-- Menu -->
-
 <div class="menu">
 
-	<!-- Search -->
+
 	<div class="menu_search">
 		<form action="#" id="menu_search_form" class="menu_search_form">
 			<input type="text" class="search_input" placeholder="Search Item" required="required">
@@ -120,7 +90,7 @@
 							<div class="cart_bar">
 								<ul class="cart_bar_list item_list d-flex flex-row align-items-center justify-content-end">
 									<li class="mr-auto">Product</li>
-									<li>Size</li>
+									<li></li>
 									<li>Price</li>
 									<li></li>
 									<li>Total</li>
@@ -138,13 +108,13 @@
 											<div><div class="product_number">1</div></div>
 											<div><div class="product_image"><img src="images/cart_item_1.jpg" alt=""></div></div>
 											<div class="product_name_container">
-												<div class="product_name" name="product_name"><a></a></div>
+												<div class="product_name"><a style="color: black;">Pink Jacket</a></div>
 
 											</div>
-											<div class="button button_clear trans_200" style="position: absolute; left: 160%;"><a href="categories.html">Edit</a></div>
-											<div class="button button_continue trans_200" style="position: absolute; left: 200%;"><a href="categories.html">Delete</a></div>
+											<div class="button button_clear trans_200" style="position: absolute; left: 160%; color: turquoise;"><a style="color: white;">Edit</a></div>
+											<div class="button button_continue trans_200" style="position: absolute; left: 200%; color: turquoise;"><a style="color: white;">Delete</a></div>
 										</div>
-										<div class="product_color product_text"><span>Size: </span>M</div>
+
 										<div class="product_price product_text"><span>Price: </span>$3.99</div>
 										<div class="product_quantity_container">
 										</div>
@@ -156,7 +126,7 @@
 							<!-- Cart Buttons -->
 							<div class="cart_buttons d-flex flex-row align-items-start justify-content-start">
 								<div class="cart_buttons_inner ml-sm-auto d-flex flex-row align-items-start justify-content-start flex-wrap">
-									<div class="button button_clear trans_200"><a href="categories.html">Add</a></div>
+									<div class="button button_clear trans_200" style="width: 170px;"><a href="index.html" style="color: white;">Add Product</a></div>
 
 								</div>
 							</div>
